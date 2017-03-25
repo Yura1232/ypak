@@ -36,8 +36,7 @@ public class Triangle {
 	 * @return площадь треугольника.
 	 */
 	public double area() {
-	double square = 0.5D * ((b.getX() - a.getX()) * (c.getY() - a.getY()) - (b.getY() - a.getY()) * (c.getX() - a.getX()));
-	return square >= 0D ? square : -square;
+	return Math.abs(0.5D * ((b.getX() - a.getX()) * (c.getY() - a.getY()) - (b.getY() - a.getY()) * (c.getX() - a.getX())));
 }
 
 }
