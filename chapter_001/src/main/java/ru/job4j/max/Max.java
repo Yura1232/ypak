@@ -17,4 +17,15 @@ public class Max {
 	public int max(int first, int second) {
 		return first > second ? first : second;
 	}
+	/**
+	 * max максимальное из 3-х чисел.
+	 * @param first первый аргумент.
+	 * @param second второй аргумент.
+	 * @param third третий аругмент.
+	 * @return максимальное из трёх чисел.
+	 */
+	public int max(int first, int second, int third) {
+		Max max = new Max();
+		return max.max(max.max(first, second), third);
+	}
 }

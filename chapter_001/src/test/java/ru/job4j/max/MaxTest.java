@@ -25,4 +25,16 @@ public class MaxTest {
 		int result = max.max(2, 1);
 		assertThat(result, is(2));
 	}
+	/**
+	* Test.
+	*/
+	@Test
+	/**
+	* Test max максимум из 3-х чисел.
+	*/
+	public void whenMaxFirstMoreThenSecondAndThirdThenFirst() {
+		Max max = new Max();
+		int result = max.max(3, 2, 1);
+		assertThat(result, is(3));
+	}
 }
