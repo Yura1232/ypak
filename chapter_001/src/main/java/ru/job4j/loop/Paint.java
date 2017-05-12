@@ -19,12 +19,11 @@ public class Paint {
             for (int imbedded = 0; imbedded < h - i; imbedded++) {
                 builder.append(" ");
             }
-            builder.append("^");
-            for (int j = 1; j < i * 2 - 1; j++) {
+            for (int j = 1; j <= i * 2 - 1; j++) {
                 builder.append("^");
             }
             if (i < h) {
-                builder.append("\n");
+                builder.append(System.getProperty("line.separator"));
             }
         }
         return builder.toString();
