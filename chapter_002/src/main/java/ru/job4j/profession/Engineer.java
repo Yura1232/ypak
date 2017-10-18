@@ -1,6 +1,6 @@
 package ru.job4j.profession;
 
-import ru.job4j.profession.*;
+//import ru.job4j.profession.*;
 /**
  * Class Engineer extends Profession.
  * @author ypak
@@ -8,7 +8,7 @@ import ru.job4j.profession.*;
  * @since 0.1
  */
 
-public class Engineer extends Profession {
+/*public class Engineer extends Profession {
 	/**
 	* category - way of speciality.
 	*/
@@ -55,3 +55,4 @@ public class Engineer extends Profession {
 	public Engineer drawDevelopment(Client client) {
 	}
 }
+*/

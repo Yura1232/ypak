@@ -1,6 +1,6 @@
 package ru.job4j.profession;
 
-import ru.job4j.profession.*;
+//import ru.job4j.profession.*;
 /**
  * Class Doctor extends Profession.
  * @author ypak
@@ -8,7 +8,7 @@ import ru.job4j.profession.*;
  * @since 0.1
  */
 
-public class Doctor extends Profession {
+/*public class Doctor extends Profession {
 	/**
 	* count - number of patients.
 	*/
@@ -67,3 +67,4 @@ public class Doctor extends Profession {
 
 	}
 }
+*/
