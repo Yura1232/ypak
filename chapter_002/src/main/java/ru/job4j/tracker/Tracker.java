@@ -2,6 +2,7 @@ package ru.job4j.tracker;
 
 import ru.job4j.tracker.*;
 import java.util.*;
+import java.lang.*;
 /**
  * class Tracker.
  */
@@ -58,24 +59,13 @@ public class Tracker {
 	 * method delete.
 	 * @param item.
 	 */
-	public void delete(Item item) {
-      String currentItem = item.getId();
+    public void delete(Item item) {
       for (int index = 0; index != position; index++) {
-          if (this.items[index].getId().equals(currentItem)) {
-              this.items[index] = null;
-              break;
+          if (this.items[index] != null && this.items[index].getId().equals(item.getId())) {
+            System.arraycopy(this.items, index + 1, this.items, index, position - index);
           }
-
       }
-      for (int updatePos = 0; updatePos != position; updatePos++) {
-          if (this.items[updatePos] == null) {
-              this.items[updatePos] = this.items[position - 1];
-              this.items[position - 1] = null;
-              break;
-          }
-
-      }
-      position--;
+      this.position--;
     }
     /**
 	 * method update.
