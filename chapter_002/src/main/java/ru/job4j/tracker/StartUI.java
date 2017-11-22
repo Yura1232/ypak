@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.Scanner;
+
 public class StartUI {
 	private static final String EXIT = "6";
 	private static final String ADD = "0";
@@ -51,10 +53,13 @@ public class StartUI {
      */
     private void editItem() {
     	System.out.println("------------ Редактирование заявки --------------");
-    	String name = this.input.ask("Введите имя заявки :");
+    	String id = this.input.ask("Введите id заявки :");
+        Item item = this.tracker.findById(id);
+        String name = this.input.ask("Введите имя заявки :");
     	String desc = this.input.ask("Введите имя заявки :");
     	String comments = this.input.ask("Введите имя заявки :");
-    	Item item = new Item(name, desc, System.currentTimeMillis(), comments);
+    	item = new Item(name, desc, System.currentTimeMillis(), comments);
+        item.setId(id);
     	this.tracker.update(item);
     }
     /**
@@ -112,7 +117,6 @@ public class StartUI {
         System.out.println("4. Find item by ID");
         System.out.println("5. Find item by NAME");
         System.out.println("6. EXIT");
-        System.out.println("Select:");
     }
 
 
